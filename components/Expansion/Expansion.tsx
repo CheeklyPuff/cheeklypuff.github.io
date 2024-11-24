@@ -10,16 +10,16 @@ export const Expansion = () => {
 
   const handleChange = (event: SelectChangeEvent) => {
     const selectedVal = event.target.value;
-    const isSelected = event.target.checked;
+    // const isSelected = event.target.checked;
 
-    if(!expansions.includes(selectedVal) && isSelected) {
-      savedExpansions.push(selectedVal);
-    }
+    // if(!expansions.includes(selectedVal) && isSelected) {
+    //   savedExpansions.push(selectedVal);
+    // }
 
-    if(expansions.includes(selectedVal) && !isSelected) {
-      var index = savedExpansions.indexOf(selectedVal);
-      savedExpansions.splice(index, 1);
-    }
+    // if(expansions.includes(selectedVal) && !isSelected) {
+    //   var index = savedExpansions.indexOf(selectedVal);
+    //   savedExpansions.splice(index, 1);
+    // }
       
     setExpansions(savedExpansions);
     localStorage.setItem(`${player}MHExpansions`, JSON.stringify(savedExpansions));
