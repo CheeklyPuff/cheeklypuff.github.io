@@ -57,7 +57,7 @@ export const BinType = styled.div`
   height: 25px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: ${(props) => (props.binType == 'recycle' ? colors.yellow : colors.green)};
+  background-color: ${(props) => (props.binType === 'recycle' ? colors.yellow : colors.green)};
 `
 export const TooltipText = styled.div`
   visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};

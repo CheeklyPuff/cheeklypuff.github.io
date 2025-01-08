@@ -50,7 +50,7 @@ const Calendar = ({collectingDay}) => {
         {collectNextDay && <Warning>Bins will be collected tomorrow.</Warning>}
         <BinTypeWrapper>
           <BinType onMouseEnter={showTooltip} onMouseLeave={hideTooltip} binType={binType}></BinType>
-          <TooltipText visible={visible}>{binType}</TooltipText>
+          <TooltipText visible={visible}>{binType} bin</TooltipText>
         </BinTypeWrapper>
       </Body>
     </Container>
