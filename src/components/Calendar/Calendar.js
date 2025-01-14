@@ -10,7 +10,7 @@ import {
   TooltipText
 } from './Calendar.styled.js';
 import holidays  from '../../json/publicholidays.json';
-import getWeekPattern from "../../utils/getWeekPattern.js";
+import { getBinColor } from "../../utils/getBinColor.js";
 
 const Calendar = ({collectingDay}) => {
   const [visible, setVisible] = useState(false);
@@ -26,7 +26,7 @@ const Calendar = ({collectingDay}) => {
   const today = dayNames[currentDay];
 
   let isHoliday = false;
-  const binType = getWeekPattern(getDate);
+  const binType = getBinColor(getDate);
   for(const holiday of holidays.records) {
     const dateText = holiday.date;
     const getHoliday = dateText.split('-');
